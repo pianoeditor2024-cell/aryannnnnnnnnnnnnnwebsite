@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نمونه واکنش‌گرا - محصولات</title>
+  <!-- CDN Tailwind (برای نمونه سریع) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- هدر ساده -->
+  <header class="bg-white shadow p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-red-600">دیجی‌نمونه</h1>
+      <!-- دکمه‌ی همبرگر فقط در موبایل نمایش داده می‌شود -->
+      <button class="lg:hidden px-3 py-2 border rounded">≡</button>
+      <nav class="hidden lg:flex gap-4">
+        <a class="hover:underline" href="#">خانه</a>
+        <a class="hover:underline" href="#">محصولات</a>
+        <a class="hover:underline" href="#">تماس</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- محتوای اصلی -->
+  <main class="container mx-auto p-4">
+    <!-- ورودی فیلتری ساده -->
+    <div class="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <input type="text" placeholder="جستجو..." class="w-full sm:w-1/2 p-2 border rounded" />
+      <div class="flex gap-2">
+        <button class="px-3 py-2 bg-white border rounded">مرتب‌سازی</button>
+        <button class="px-3 py-2 bg-white border rounded">فیلتر</button>
+      </div>
+    </div>
+
+    <!-- گرید محصولات: موبایل 1 ستون، تبلت 2 ستون، لپ‌تاپ 3 یا 4 ستون -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- کارت محصول (تایپک) — این کارت را برای هر محصول تکرار کن -->
+      <article class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://via.placeholder.com/600x400" alt="محصول" class="w-full h-[180px] object-cover rounded-md mb-3" />
+        <h2 class="text-lg font-bold">گوشی هوشمند مدل X</h2>
+        <p class="text-sm text-gray-500 mb-2">ویژگی کوتاه محصول — حافظه 128GB</p>
+        <div class="mt-auto flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 line-through text-sm">۶,۰۰۰,۰۰۰ تومان</p>
+            <p class="text-green-600 font-bold">۵,۵۰۰,۰۰۰ تومان</p>
+          </div>
+          <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded">افزودن</button>
+        </div>
+      </article>
+
+      <!-- نسخه‌های نمونه دیگر (کپی کن برای تست گرید) -->
+      <article class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://via.placeholder.com/600x400" alt="محصول" class="w-full h-[180px] object-cover rounded-md mb-3" />
+        <h2 class="text-lg font-bold">هدفون بی‌سیم Y</h2>
+        <p class="text-sm text-gray-500 mb-2">نویز کنسلینگ — برد ۱۰m</p>
+        <div class="mt-auto flex items-center justify-between">
+          <div>
+            <p class="text-green-600 font-bold">۱,۲۰۰,۰۰۰ تومان</p>
+          </div>
+          <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded">افزودن</button>
+        </div>
+      </article>
+
+      <!-- تکرار کارت‌ها برای تست -->
+      <article class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://via.placeholder.com/600x400" alt="محصول" class="w-full h-[180px] object-cover rounded-md mb-3" />
+        <h2 class="text-lg font-bold">لپ‌تاپ Z</h2>
+        <p class="text-sm text-gray-500 mb-2">رم 16GB — پردازنده i7</p>
+        <div class="mt-auto flex items-center justify-between">
+          <div>
+            <p class="text-green-600 font-bold">۲۵,۰۰۰,۰۰۰ تومان</p>
+          </div>
+          <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded">افزودن</button>
+        </div>
+      </article>
+
+      <!-- اضافه کن تا ببینی گرید چطور رفتار میکند -->
+      <article class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://via.placeholder.com/600x400" alt="محصول" class="w-full h-[180px] object-cover rounded-md mb-3" />
+        <h2 class="text-lg font-bold">محصول D</h2>
+        <p class="text-sm text-gray-500 mb-2">توضیح کوتاه</p>
+        <div class="mt-auto flex items-center justify-between">
+          <div>
+            <p class="text-green-600 font-bold">۷۰۰,۰۰۰ تومان</p>
+          </div>
+          <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded">افزودن</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
